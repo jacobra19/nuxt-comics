@@ -8,4 +8,8 @@ export default {
     modules: ['@nuxtjs/axios'],
 
     components: true,
+
+    serverMiddleware: {
+        '/api': '~/api'
+    },
 }
