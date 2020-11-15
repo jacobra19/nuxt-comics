@@ -19,13 +19,9 @@ export default {
     computed: {
         // mix the getters into computed with object spread operator
         ...mapGetters({
-            doneCount: 'getComics',
+            comics: 'getComics',
             getIsLoggedinL: 'getIsLoggedinL',
         }),
-        comics(){
-          console.log('this.doneCount', this.doneCount)
-          return this.$store.getters.getComics
-        }
     },
 };
 </script>

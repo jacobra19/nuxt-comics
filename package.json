@@ -6,6 +6,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
     "axios": "^0.21.0",
+    "mongodb": "^3.6.3",
     "nuxt": "^2.14.7"
   },
   "devDependencies": {

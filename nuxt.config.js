@@ -1,6 +1,8 @@
 export default {
     env: {
-        baseAPI: process.env.API
+        baseAPI: process.env.API,
+        mycomicshop: process.env.mycomicshop || '',
+
     },
     buildModules: [
         ['@nuxtjs/vuetify', { /* module options */ }]
@@ -8,4 +10,8 @@ export default {
     modules: ['@nuxtjs/axios'],
 
     components: true,
+
+    serverMiddleware: {
+        '/api': '~/api'
+    },
 }
