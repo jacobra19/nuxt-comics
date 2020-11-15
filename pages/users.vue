@@ -12,8 +12,6 @@
 export default {
     async asyncData (context) {
         const data = await context.$axios.$get('/api/users')
-        // console.log('data.data', data.data)
-        console.log('data', data)
         return { users: data }
     },
 }

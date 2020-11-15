@@ -7,20 +7,20 @@ export const state = () => ({
 })
 
 export const actions = {
+    async nuxtServerInit ({ state }, { req }) {
+        const res = await this.$axios.get(`api/comics/`);
+        state.comics = res.data || []
+    },
+    
     fetchComics: async function (context){
-        console.log('fetchComics')
-        console.log('process.env.baseAPI', process.env.baseAPI)
-        const res = await this.$axios.get(`${process.env.baseAPI}/comics/`);
+        const res = await this.$axios.get(`api/comics/`);
         context.commit('setComics',{comics: res.data || []})
     }
 }
 
 export const mutations = {
     setComics: (state, {comics}) => {
-        console.log('state.comics.length', state.comics.length)
-        console.log('comics.length', comics.length)
         state.comics = comics
-        console.log('state.comics.length', state.comics.length)
     }
 }
 

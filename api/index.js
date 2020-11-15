@@ -7,9 +7,14 @@ const app = express()
 const users = require('./routes/users')
 const test = require('./routes/test')
 
+const comics = require('./routes/comics')
+const publishers = require('./routes/publishers')
+
 // Import API Routes
 app.use(users)
 app.use(test)
+app.use(comics)
+app.use(publishers)
 
 // Export express app
 module.exports = app
