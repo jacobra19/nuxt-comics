@@ -3,7 +3,7 @@
 
 export const state = () => ({
     comics: [],
-    authenticated: false,
+    authenticated: true,
 })
 
 export const actions = {
